@@ -55,7 +55,7 @@ stages:
     jobs:
       - job: BuildAndPush
         displayName: 'Build and Push Docker Image'
-        steps:
+      steps:
        - task: Docker@1
          displayName: 'Build an image'
         inputs:
