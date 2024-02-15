@@ -29,3 +29,9 @@ stages:
         deploy:
           steps:
           - script: echo "hello, qa world !!!"
+- task: SnykSecurityScan@1
+  inputs:
+    serviceConnectionEndpoint: 'Snyk Scan'
+    testType: 'app'
+    monitorWhen: 'always'
+    failOnIssues: true
