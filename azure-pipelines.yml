@@ -1,12 +1,4 @@
 # Python package
-- task:
-    SnykSecurityScan@1
-  inputs:
-    serviceConnectionEndpoint: 'Snyk Scan'
-    testType: 'code'
-    failOnIssues: true
-    projectName: 'python-sample-vscode-flask-tutorial'
-    organization: 'Syoni13'
 
 # Create and test a Python package on multiple Python versions.
 # Add steps that analyze code, save the dist with the build record, publish to a PyPI-compatible index, and more:
@@ -26,6 +18,14 @@ strategy:
       python.version: '3.6'
     Python37:
       python.version: '3.7'
+- task:
+    SnykSecurityScan@1
+  inputs:
+    serviceConnectionEndpoint: 'Snyk Scan'
+    testType: 'code'
+    failOnIssues: true
+    projectName: 'python-sample-vscode-flask-tutorial'
+    organization: 'Syoni13'
 
 steps:
 - task: UsePythonVersion@0
