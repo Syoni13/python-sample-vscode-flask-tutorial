@@ -1,10 +1,4 @@
-steps:
-- task: AzurePowerShell@3
-  displayName: 'Azure PowerShell script: InlineScript'
+- task: PowerShell@2
   inputs:
-    
-    ScriptType: InlineScript
-    Inline: |
-     Write-Output  "This is an example"
-     Write-Output "This is another one"
-    azurePowerShellVersion: LatestVersion
+    targetType: 'inline'
+    script: 'Write-Host "Hello World"'
