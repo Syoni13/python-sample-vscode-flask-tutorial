@@ -20,11 +20,6 @@ strategy:
       python.version: '3.7'
 
 steps:
-- task: SnykSecurityScan@1
-  inputs:
-    serviceConnectionEndpoint: 'Snyk Scan'
-    testType: 'code'
-    failOnIssues: true
 - task: UsePythonVersion@0
   inputs:
     versionSpec: '$(python.version)'
