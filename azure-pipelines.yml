@@ -1,5 +1,6 @@
 # Python package
-- task: SnykSecurityScan@1
+- task:
+    SnykSecurityScan@1
   inputs:
     serviceConnectionEndpoint: 'Snyk Scan'
     testType: 'code'
@@ -12,7 +13,8 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/python
 
 trigger:
-- main
+- 
+  main
 
 pool:
   vmImage: ubuntu-latest
