@@ -21,6 +21,11 @@ stages:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)'
         ArtifactName: 'drop'
         publishLocation: 'Container'
+    - task: SnykSecurityScan@1
+      inputs:
+        serviceConnectionEndpoint: 'Snyk Scan'
+        testType: 'code'
+        failOnIssues: true
 - stage: Deploy
   jobs:
   - job: DeployWeb
