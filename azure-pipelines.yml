@@ -1,11 +1,12 @@
 
 steps:
-  - task: PowerShell@2
-    inputs:
-      targetType: 'inline'
-      script: 'Write-Host "Hello World"'
   - task: SnykSecurityScan@1
     inputs:
       serviceConnectionEndpoint: 'Snyk Scan'
       testType: 'code'
       failOnIssues: true
+  - task: PowerShell@2
+    inputs:
+      targetType: 'inline'
+      script: 'Write-Host "Hello World"'
+  
