@@ -19,8 +19,7 @@ strategy:
     Python37:
       python.version: '3.7'
 
-- task:
-    SnykSecurityScan@1
+- task: SnykSecurityScan@1
   inputs:
     serviceConnectionEndpoint: 'Snyk Scan'
     testType: 'code'
