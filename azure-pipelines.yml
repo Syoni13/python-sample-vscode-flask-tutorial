@@ -1,5 +1,7 @@
-- task: PowerShell@2
-  inputs:
-    filePath: '$(System.DefaultWorkingDirectory)\test2.ps1'
-    arguments: '-input1 "Hello" -input2 "World"'
-  displayName: 'Print Hello World'
+  task: AzurePowerShell@4
+    inputs:
+      azureSubscription: 'MPN'
+      ScriptType: 'InlineScript'
+      Inline: 'Write-Output  "This is an example"
+      Write-Output "This is another one"'
+      azurePowerShellVersion: 'LatestVersion'
