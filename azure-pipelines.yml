@@ -2,7 +2,7 @@ steps:
 - task: AzurePowerShell@3
   displayName: 'Azure PowerShell script: InlineScript'
   inputs:
-    azureSubscription: Example
+    
     ScriptType: InlineScript
     Inline: |
      Write-Output  "This is an example"
