@@ -19,13 +19,7 @@ strategy:
     Python37:
       python.version: '3.7'
 
-- task: SnykSecurityScan@1
-  inputs:
-    serviceConnectionEndpoint: 'Snyk Scan'
-    testType: 'code'
-    failOnIssues: true
-    projectName: 'python-sample-vscode-flask-tutorial'
-    organization: 'Syoni13'
+
 
 steps:
 - task: UsePythonVersion@0
